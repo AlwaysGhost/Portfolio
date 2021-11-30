@@ -1,0 +1,8 @@
+Last Day of Current Month
+SELECT add_months(trunc(sysdate) - (to_number(to_char(sysdate,'DD')) - 1), 1) -1 FROM dual
+
+First Day of Current Month
+SELECT trunc(sysdate) - (to_number(to_char(sysdate,'DD')) - 1) FROM dual
+
+First day of the week
+select (sysdate - to_char(sysdate-1, 'd') + 1) first_day_of_week --A monday here from dual
